@@ -14,7 +14,7 @@ public class Students {
 	private int students_id;
 	private String students_name;
 	private String students_password;
-	private String students_repassword;
+	
 	private String students_email;
 	private String students_tel;
 	private String students_grade;
@@ -56,13 +56,7 @@ public class Students {
 		this.students_password = students_password;
 	}
 	
-	@Column
-	public String getStudents_repassword() {
-		return students_repassword;
-	}
-	public void setStudents_repassword(String students_repassword) {
-		this.students_repassword = students_repassword;
-	}
+	
 	
 	@Column(nullable=false)
 	public String getStudents_email() {

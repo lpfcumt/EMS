@@ -18,4 +18,26 @@ public class StudentsServiceImpl extends BaseServiceImpl<Students>  implements S
 		}
 	}
 
+	@Override
+	public Students findByEmail(String students_email) {
+		// TODO Auto-generated method stub
+		if(!studentsDao.findByEmail(students_email).isEmpty()){
+			return studentsDao.findByEmail(students_email).get(0);
+		}
+		else {
+			return null;
+		}
+	}
+
+	@Override
+	public Students findByID_Password(int students_id, String students_password) {
+		// TODO Auto-generated method stub
+		if(!studentsDao.findByID_Password(students_id,students_password).isEmpty()){
+			return studentsDao.findByID_Password(students_id,students_password).get(0);
+		}
+		else {
+			return null;
+		}
+	}
+
 }
