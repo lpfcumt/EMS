@@ -54,4 +54,17 @@ public class StudentsServiceImpl extends BaseServiceImpl<Students>  implements S
 		return studentsDao.listByName(students_name);
 	}
 
+	@Override
+	public void updatePassword(int students_id, String students_password, String newpassword) {
+		// TODO Auto-generated method stub
+		studentsDao.updatePassword(students_id,students_password,newpassword);
+	}
+
+	@Override
+	public void updateById(int students_id, String students_name, String students_email, String students_grade,
+			String students_major, String students_school, String students_tel) {
+		// TODO Auto-generated method stub
+		studentsDao.updateById(students_id,students_name,students_email,students_grade,students_major,students_school,students_tel);
+	}
+
 }

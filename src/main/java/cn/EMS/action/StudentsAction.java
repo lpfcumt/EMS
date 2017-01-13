@@ -16,6 +16,16 @@ public class StudentsAction extends BaseAction<Students>{
 	private static final long serialVersionUID = 1L;
 	
 	private Map<String, Object> jsonMap=new HashMap<String, Object>();
+	private String newpassword;
+	
+	
+	public String getNewpassword() {
+		return newpassword;
+	}
+
+	public void setNewpassword(String newpassword) {
+		this.newpassword = newpassword;
+	}
 
 	public Map<String, Object> getJsonMap() {
 		return jsonMap;
@@ -34,7 +44,7 @@ public class StudentsAction extends BaseAction<Students>{
 		else {
 			jsonMap.put("flag", false);
 		}
-		;
+		
 		
 		return "Check_StudentsId";
 		
@@ -109,4 +119,17 @@ public class StudentsAction extends BaseAction<Students>{
 		session.put("listAllStudents", listAllStudents);
 		return SUCCESS;
 	}
+	
+	/*修改密码*/
+	public String UpdatePassword() throws Exception{
+		studentsService.updatePassword(model.getStudents_id(),model.getStudents_password(),this.getNewpassword());
+		return SUCCESS;
+	}
+	
+	/*修改学生个人信息*/
+	public String UpdateStudents() throws Exception{
+		studentsService.updateById(model.getStudents_id(),model.getStudents_name(),model.getStudents_email(),model.getStudents_grade(),
+				model.getStudents_major(),model.getStudents_school(),model.getStudents_tel());
+		return SUCCESS;
+	} 
 }

@@ -18,4 +18,9 @@ public interface StudentsService extends BaseService<Students> {
 
 	List<Students> listByName(String students_name);
 
+	void updatePassword(int students_id, String students_password, String newpassword);
+
+	void updateById(int students_id, String students_name, String students_email, String students_grade,
+			String students_major, String students_school, String students_tel);
+
 }
