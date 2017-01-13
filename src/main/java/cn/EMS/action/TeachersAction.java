@@ -41,7 +41,7 @@ public class TeachersAction extends BaseAction<Teachers>{
 		 else{
 			 jsonMap.put("flag", false);
 		 }
-		 return "Check_TeachersId";
+		 return "Check_TeachersEmail";
 	 }
 	 
 	/*½ÌÊ¦×¢²á*/

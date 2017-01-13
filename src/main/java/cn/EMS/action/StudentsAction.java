@@ -132,4 +132,6 @@ public class StudentsAction extends BaseAction<Students>{
 				model.getStudents_major(),model.getStudents_school(),model.getStudents_tel());
 		return SUCCESS;
 	} 
+	
+	/*Íü¼ÇÃÜÂë*/
 }

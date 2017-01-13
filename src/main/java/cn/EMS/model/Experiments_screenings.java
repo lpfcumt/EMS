@@ -1,5 +1,7 @@
 package cn.EMS.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +15,9 @@ public class Experiments_screenings {
 	private int rowsid;
 	private int experiments_id;
 	private int experiments_screenings;
-	private String experiments_starttime;
-	private String experiments_endtime;
-	private String experiments_duration;//时长
+	private Date experiments_starttime;
+	private Date experiments_endtime;
+	private int experiments_duration;//时长
 	private int experiments_needstudents;
 	private String experiments_field;
 	
@@ -44,30 +46,30 @@ public class Experiments_screenings {
 		this.experiments_screenings = experiments_screenings;
 	}
 	
+	
 	@Column
-	public String getExperiments_starttime() {
+	public Date getExperiments_starttime() {
 		return experiments_starttime;
 	}
-	public void setExperiments_starttime(String experiments_starttime) {
+	public void setExperiments_starttime(Date experiments_starttime) {
 		this.experiments_starttime = experiments_starttime;
 	}
 	
 	@Column
-	public String getExperiments_endtime() {
+	public Date getExperiments_endtime() {
 		return experiments_endtime;
 	}
-	public void setExperiments_endtime(String experiments_endtime) {
+	public void setExperiments_endtime(Date experiments_endtime) {
 		this.experiments_endtime = experiments_endtime;
 	}
 	
 	@Column
-	public String getExperiments_duration() {
+	public int getExperiments_duration() {
 		return experiments_duration;
 	}
-	public void setExperiments_duration(String experiments_duration) {
+	public void setExperiments_duration(int experiments_duration) {
 		this.experiments_duration = experiments_duration;
 	}
-	
 	@Column
 	public int getExperiments_needstudents() {
 		return experiments_needstudents;
