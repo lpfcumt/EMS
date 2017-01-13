@@ -1,5 +1,7 @@
 package cn.EMS.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import cn.EMS.model.Students;
@@ -38,6 +40,12 @@ public class StudentsServiceImpl extends BaseServiceImpl<Students>  implements S
 		else {
 			return null;
 		}
+	}
+
+	@Override
+	public List<Students> listById(int students_id) {
+		// TODO Auto-generated method stub
+		return studentsDao.listById(students_id);
 	}
 
 }

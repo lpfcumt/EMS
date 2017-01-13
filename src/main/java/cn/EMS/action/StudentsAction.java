@@ -3,6 +3,7 @@ package cn.EMS.action;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import cn.EMS.model.Students;
@@ -85,6 +86,13 @@ public class StudentsAction extends BaseAction<Students>{
 		session.put("students_name", students.getStudents_name());
 		session.put("students_email", students.getStudents_email());
 		session.put("students_tel", students.getStudents_tel());
+		return SUCCESS;
+	}
+	
+	/*根据学号输出学生*/
+	public String ListStudentsById() throws Exception{
+		List<Students> listStudentsById=studentsService.listById(model.getStudents_id());
+		session.put("listStudentsById", listStudentsById);
 		return SUCCESS;
 	}
 }
