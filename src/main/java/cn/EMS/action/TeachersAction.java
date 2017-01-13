@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import cn.EMS.model.Teachers;
 
+
 @SuppressWarnings("serial")
 @Controller("teachersAction")
 public class TeachersAction extends BaseAction<Teachers>{
@@ -17,6 +18,32 @@ public class TeachersAction extends BaseAction<Teachers>{
 	public void setJsonMap(Map<String, Object> jsonMap) {
 		this.jsonMap = jsonMap;
 	}
+	
+	/*检查教职工学号是否重复*/
+
+	 public String Check_TeachersId() throws Exception{
+		 Teachers teachers=teachersService.FindById(model.getTeachers_id());
+		 if (teachers==null) {
+			 jsonMap.put("flag", true);
+		}
+		 else{
+			 jsonMap.put("flag", false);
+		 }
+		 return "Check_TeachersId";
+	 }
+	 
+	 /*检查教职工邮箱是否重复*/
+	 public String Check_TeachersEmail() throws Exception{
+		 Teachers teachers=teachersService.FindByEmail(model.getTeachers_id());
+		 if (teachers==null) {
+			 jsonMap.put("flag", true);
+		}
+		 else{
+			 jsonMap.put("flag", false);
+		 }
+		 return "Check_TeachersId";
+	 }
+	 
 	/*教师注册*/
 	public String TeachersRegister() throws Exception{
 		Date dt=new Date();

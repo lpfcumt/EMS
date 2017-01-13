@@ -1,7 +1,6 @@
 package cn.EMS.service.impl;
 
 import org.springframework.stereotype.Service;
-
 import cn.EMS.model.Teachers;
 import cn.EMS.service.TeachersService;
 @Service("adminsService")
@@ -15,4 +14,20 @@ public class TeachersServiceImpl extends BaseServiceImpl<Teachers> implements Te
 			return null;
 		}
     }
+	@Override
+	public Teachers FindById(int teachers_id) {
+		if (!teachersDao.FindById(teachers_id).isEmpty()){
+			return teachersDao.FindById(teachers_id).get(0);
+		}else {
+			return null;
+		}
+	}
+	@Override
+	public Teachers FindByEmail(int teachers_id) {
+		if (!teachersDao.FindByEmail(teachers_id).isEmpty()){
+			return teachersDao.FindByEmail(teachers_id).get(0);
+		}else {
+			return null;
+		}
+	}
 }
