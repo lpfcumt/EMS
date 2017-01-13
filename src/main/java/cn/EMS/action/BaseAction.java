@@ -26,6 +26,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 	@Resource(name="usersprojectService")
 	protected ProjectsService projectsService;*/
 	
+
+	
 	
 	//在调用构造方法的时候给model赋值
 	protected T model;

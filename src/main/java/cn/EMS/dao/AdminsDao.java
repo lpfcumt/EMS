@@ -1,5 +1,7 @@
 package cn.EMS.dao;
 
-public class AdminsDao {
+import cn.EMS.model.Admins;
+
+public interface AdminsDao extends BaseDao<Admins>{
 
 }

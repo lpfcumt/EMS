@@ -11,7 +11,14 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import cn.EMS.dao.AdminsDao;
 import cn.EMS.dao.BaseDao;
+import cn.EMS.dao.ExperimentsDao;
+import cn.EMS.dao.Experiments_joinstudentsDao;
+import cn.EMS.dao.Experiments_screeningsDao;
+import cn.EMS.dao.Experiments_unjoinstudentsDao;
+import cn.EMS.dao.StudentsDao;
+import cn.EMS.dao.TeachersDao;
 import cn.EMS.service.BaseService;
 
 
@@ -48,6 +55,20 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 	@Resource(name="usersprojectDao")
 	protected ProjectsDao usersprojectDao;
 	*/
+	@Resource(name="adminsDao")
+	protected AdminsDao adminsDao;
+	@Resource(name="experiments_joinstudentsDao")
+	protected Experiments_joinstudentsDao experiments_joinstudentsDao;
+	@Resource(name="experiments_screeningsDao")
+	protected Experiments_screeningsDao experiments_screeningsDao;
+	@Resource(name="experiments_unjoinstudentsDao")
+	protected Experiments_unjoinstudentsDao experiments_unjoinstudentsDao;
+	@Resource(name="experimentsDao")
+	protected ExperimentsDao experimentsDao;
+	@Resource(name="studentsDao")
+	protected StudentsDao studentsDao;
+	@Resource(name="teachersDao")
+	protected TeachersDao teachersDao;
 	
 	
 	@Override
