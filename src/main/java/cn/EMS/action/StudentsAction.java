@@ -95,4 +95,18 @@ public class StudentsAction extends BaseAction<Students>{
 		session.put("listStudentsById", listStudentsById);
 		return SUCCESS;
 	}
+	
+	/*根据名字输出学生*/
+	public String ListStudentsByName() throws Exception{
+		List<Students> listStudentsByName=studentsService.listByName(model.getStudents_name());
+		session.put("listStudentsByName", listStudentsByName);
+		return SUCCESS;
+	}
+	
+	/*输出所有学生*/
+	public String ListAllStudents() throws Exception{
+		List<Students> listAllStudents=studentsService.query();
+		session.put("listAllStudents", listAllStudents);
+		return SUCCESS;
+	}
 }

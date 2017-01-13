@@ -32,4 +32,20 @@ public class StudentsDaoImpl extends BaseDaoImpl<Students> implements StudentsDa
 		return findByHql("from students where students_id="+students_id+" and students_password='"+students_password+"'");
 	}
 
+
+
+	@Override
+	public List<Students> listById(int students_id) {
+		// TODO Auto-generated method stub
+		return findByHql("from students where students_id="+students_id);
+	}
+
+
+
+	@Override
+	public List<Students> listByName(String students_name) {
+		// TODO Auto-generated method stub
+		return findByHql("from students where students_name="+students_name);
+	}
+
 }

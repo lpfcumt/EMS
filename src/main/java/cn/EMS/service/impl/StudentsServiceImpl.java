@@ -48,4 +48,10 @@ public class StudentsServiceImpl extends BaseServiceImpl<Students>  implements S
 		return studentsDao.listById(students_id);
 	}
 
+	@Override
+	public List<Students> listByName(String students_name) {
+		// TODO Auto-generated method stub
+		return studentsDao.listByName(students_name);
+	}
+
 }

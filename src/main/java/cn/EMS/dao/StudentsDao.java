@@ -16,4 +16,12 @@ public interface StudentsDao extends BaseDao<Students>{
 
 	List<Students> findByID_Password(int students_id, String students_password);
 
+
+
+	List<Students> listById(int students_id);
+
+
+
+	List<Students> listByName(String students_name);
+
 }

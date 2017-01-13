@@ -14,4 +14,8 @@ public interface StudentsService extends BaseService<Students> {
 
 	List<Students> listById(int students_id);
 
+	
+
+	List<Students> listByName(String students_name);
+
 }
