@@ -12,6 +12,6 @@ public class TeachersDaoImpl extends BaseDaoImpl<Teachers> implements TeachersDa
 	@Override
 	public List<Teachers> Query(int teachers_id, String teachers_password) {
 		// TODO Auto-generated method stub
-		return findByHql("from teachers where teachers_id='"+teachers_id+"' and teachers_password='"+teachers_password+"'");
+		return findByHql("from teachers where teachers_id="+teachers_id+" and teachers_password='"+teachers_password+"'");
 	}
 }
