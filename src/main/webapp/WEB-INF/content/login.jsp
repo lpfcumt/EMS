@@ -18,13 +18,15 @@
 </head>
 <body>
 <div class="container">
-   <section class="bodybackgroundcolor">
+   <div class="bodybackgroundcolor">
     	<!-- banner -->
-    	<div class="row">
+   		<div class="row">
 			<div class="col-lg-2">
             </div>
             <div class="col-lg-8">
+            	<div class="banner">
                 <img  class="img-responsive" alt="厦门大学管理学院" src="../image/topimage.jpg"/>
+                </div>
             </div>
             <div class="col-lg-2">
             </div>
@@ -34,48 +36,74 @@
         <!--start of loginbox -->
         <section class="loginbox">
         <div class="row">
-        	<div class="col-lg-6">
+        	
+        
+        
+        
+        	<div class="col-lg-3">
             </div>
         	<div class="col-lg-6">
             	<form id="defaultForm" method="post" class="form-horizontal" action=""><!-- 修改action-->
                  <div class="leftloginbox">
                     	<div class="text-center" style="font-size:18px;">
                           <div class="leftloginboxbar">
-                        	        实验管理系统
+                        	        <strong>实验管理系统</strong>
                           </div>
                      	</div>
                         	<div class="alert alert-success" style="display: none;"></div>
                         	<div class="form-group">
                         		<div class="leftinputbox">
-                            		<label class="col-lg-3 control-label"><span class="glyphicon glyphicon-user"></span> 用户名</label>
+                            		<label class="col-lg-3 control-label"><span class="glyphicon glyphicon-user"></span> </label>
                             		<div class="col-lg-6">
-                                		<input type="text" class="form-control" id="" name="students_id" />
+                                		<input type="text" class="form-control" id="" name="students_id" placeholder="请输入您的学工号" />
                             		</div>
                             	</div>
                         	</div>
                         	<div class="form-group">
                         		<div class="leftinputbox">
-                            		<label class="col-lg-3 control-label"><span class="glyphicon glyphicon-lock"></span> 密码</label>
+                            		<label class="col-lg-3 control-label"><span class="glyphicon glyphicon-lock"></span></label>
                             		<div class="col-lg-6">
-                                	<input type="password" class="form-control" id="" name="students_password" /><a href="#">忘记密码？</a>
-                                    <a href="register.jsp" target="_blank">注册</a>
+                                	<input type="password" class="form-control" id="" name="students_password" placeholder="请输入您的密码"/><a href="#">忘记密码？</a><br/>
+                                    <div class="radio-inline">
+                                	<label class="radio-inline">
+                                    <input type="radio" name="1" id="" checked>教师
+                                    </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                    <label class="radio-inline">
+                                    <input type="radio" name="1" id="">学生
+                                    </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                    <label class="radio-inline">
+                                    <input type="radio" name="1" id="">管理员	
+                                    </label>
+                                    </div>
                             		</div>
                             	</div>
                         	</div>
                				<div class="form-group">
                             	<div class="leftinputbox">
-                            		<div class="col-lg-12">
-                                	<button type="submit" class="btn btn-primary btn-block">登录</button>
+                                	<div class="col-lg-2">
+                                    </div>
+                            		<div class="col-lg-4">
+                                	<button type="submit" class="btn btn-info btn-block">登录</button>
                        				</div>
+                                    <div class="col-lg-4">
+                                	<button type="submit" class="btn btn-info btn-block" onc>注册</button>
+                       				</div> 
+                                    <div class="col-lg-2">
+                                    </div>
                                 </div>
                         	</div>
                             </div>  <!-- left loginbox end -->
                  </form>
                         
           </div> <!--col 8 end -->
-          
+          <div class="col-lg-3">
+          </div>
   		</div><!-- row end-->
-        </section><!--loginbox end -->
+        </div><!--loginbox end -->
    </section>
    <!--end of loginbox -->
    

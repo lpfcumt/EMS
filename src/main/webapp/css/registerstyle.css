@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 .bodybackgroundcolor{
-	background-color:#BAE4EF;
 	width:auto;
 	height:auto;
 }
@@ -55,10 +54,8 @@
 	width:auto;
 	height:auto;
 	margin-top:10px;
-	padding-left:100px;
-	padding-right:100px;
-	text-align:center;
-	margin-bottom:20px;
+	border-top-style:solid 1px;
+	padding-bottom:15px;
 	}
 .inputbox{
 	margin-top:10px;
