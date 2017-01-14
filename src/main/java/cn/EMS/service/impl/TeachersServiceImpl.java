@@ -1,5 +1,7 @@
 package cn.EMS.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import cn.EMS.model.Teachers;
 import cn.EMS.service.TeachersService;
@@ -29,5 +31,15 @@ public class TeachersServiceImpl extends BaseServiceImpl<Teachers> implements Te
 		}else {
 			return null;
 		}
+	}
+	@Override
+	public List<Teachers> listById(int teachers_id) {
+		// TODO Auto-generated method stub
+		return teachersDao.listById(teachers_id);
+	}
+	@Override
+	public List<Teachers> listByName(String teachers_name) {
+		// TODO Auto-generated method stub
+		return teachersDao.listByname(teachers_name);
 	}
 }

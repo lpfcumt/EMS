@@ -3,8 +3,10 @@ package cn.EMS.action;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
+
 import cn.EMS.model.Teachers;
 
 
@@ -75,4 +77,23 @@ public class TeachersAction extends BaseAction<Teachers>{
    }
 		return "Check_TeachersLogin";
   }
+	
+	/*根据教职工号输出老师*/
+	public String ListTeachersById() throws Exception{
+		List<Teachers> listTeachersById=teachersService.listById(model.getTeachers_id());
+		session.put("listTeachersById", listTeachersById);
+		return SUCCESS;
+	}
+	/*根据名字输出老师*/
+	public String ListTeachersByName() throws Exception{
+		List<Teachers> listTeachersByName=teachersService.listByName(model.getTeachers_name());
+		session.put("listTeachersByName", listTeachersByName);
+		return SUCCESS;
+	}
+	/*输出所有学生*/
+	public String ListAllTeachers() throws Exception{
+		List<Teachers> listAllTeachers=teachersService.listByName(model.getTeachers_name());
+		session.put("listAllTeachers", listAllTeachers);
+		return SUCCESS;
+	}
 }

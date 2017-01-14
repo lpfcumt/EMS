@@ -12,4 +12,8 @@ public interface TeachersDao extends BaseDao<Teachers>{
 	List<Teachers> FindById(int teachers_id);
 	List<Teachers> FindByEmail(int teachers_email);
 
+	List<Teachers> listById(int teachers_id);
+
+	List<Teachers> listByname(String teachers_name);
+
 }

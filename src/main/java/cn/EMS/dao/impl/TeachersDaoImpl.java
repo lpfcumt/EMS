@@ -22,6 +22,18 @@ public class TeachersDaoImpl extends BaseDaoImpl<Teachers> implements TeachersDa
 	@Override
 	public List<Teachers> FindByEmail(int teachers_email) {
 		// TODO Auto-generated method stub
-		return findByHql("from teachers where teachers_email="+teachers_email);
+		return findByHql("from teachers where teachers_email='"+teachers_email+"'");
+	}
+
+	@Override
+	public List<Teachers> listById(int teachers_id) {
+		// TODO Auto-generated method stub
+		return findByHql("from teachers where teachers_id="+teachers_id);
+	}
+
+	@Override
+	public List<Teachers> listByname(String teachers_name) {
+		// TODO Auto-generated method stub
+		return findByHql("from teachers where teachers_name='"+teachers_name+"'");
 	}
 }
