@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import cn.EMS.model.Teachers;
 import cn.EMS.service.TeachersService;
-@Service("adminsService")
+@Service("teachersService")
 public class TeachersServiceImpl extends BaseServiceImpl<Teachers> implements TeachersService {
 	@Override
 	public Teachers Query(int teachers_id, String teachers_password) {
@@ -41,5 +41,11 @@ public class TeachersServiceImpl extends BaseServiceImpl<Teachers> implements Te
 	public List<Teachers> listByName(String teachers_name) {
 		// TODO Auto-generated method stub
 		return teachersDao.listByname(teachers_name);
+	}
+	@Override
+	public void updateTeachersById(int teachers_id, String teachers_name, String teachers_email, String teachers_password,
+			String teachers_repassword, String teachers_school, String teachers_sex, String teachers_tel) {
+		// TODO Auto-generated method stub
+		teachersDao.updateTeachersById(teachers_id,teachers_name,teachers_email,teachers_password,teachers_repassword,teachers_school,teachers_sex,teachers_tel);
 	}
 }

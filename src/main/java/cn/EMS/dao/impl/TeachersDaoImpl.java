@@ -36,4 +36,11 @@ public class TeachersDaoImpl extends BaseDaoImpl<Teachers> implements TeachersDa
 		// TODO Auto-generated method stub
 		return findByHql("from teachers where teachers_name='"+teachers_name+"'");
 	}
+
+	@Override
+	public void updateTeachersById(int teachers_id, String teachers_name, String teachers_email, String teachers_password,
+			String teachers_repassword, String teachers_school, String teachers_sex, String teachers_tel) {
+		// TODO Auto-generated method stub
+		findByHql("update teachers t set t.teachers_name='"+teachers_name+"',t.teachers.name='"+teachers_name+"',t.teachers_email='"+teachers_email+"',t.teachers_password='"+teachers_password+"',t.teachers_repassword='"+teachers_repassword+"',t.teachers_school='"+teachers_school+"',t.teachers_sex='"+teachers_sex+"',t.teachers_tel='"+teachers_tel+"'where teachers_id="+teachers_id);
+	}
 }

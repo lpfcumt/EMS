@@ -8,13 +8,13 @@
 <title>学生注册</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="../dist/css/bootstrapValidator.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/registerstyle.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/templatemo_style.css"/>
-    <script type="text/javascript" src="../vendor/jquery/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../dist/js/bootstrapValidator.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="dist/css/bootstrapValidator.css"/>
+    <link rel="stylesheet" type="text/css" href="css/registerstyle.css"/>
+    <link rel="stylesheet" type="text/css" href="css/templatemo_style.css"/>
+    <script type="text/javascript" src="vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/bootstrapValidator.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 			<div class="col-lg-2">
             </div>
             <div class="col-lg-8">
-                <img  class="img-responsive" alt="厦门大学管理学院" src="../image/topimage.jpg"/>
+                <img  class="img-responsive" alt="厦门大学管理学院" src="image/topimage.jpg"/>
             </div>
             <div class="col-lg-2">
             </div>

@@ -96,4 +96,13 @@ public class TeachersAction extends BaseAction<Teachers>{
 		session.put("listAllTeachers", listAllTeachers);
 		return SUCCESS;
 	}
+	/*教师修改个人信息*/
+	public String updateTeachersById() throws Exception{
+		 teachersService.updateTeachersById(model.getTeachers_id(),model.getTeachers_name(),
+				 model.getTeachers_email(),model.getTeachers_password(),model.getTeachers_repassword(),
+				 model.getTeachers_school(),model.getTeachers_sex(),model.getTeachers_tel());      	
+		return SUCCESS;
+		
+		
+	}
 }
